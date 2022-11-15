@@ -397,6 +397,16 @@
                                        TextWrapping="Wrap"><Run Text="單層儲存路徑：直接把圖片儲存在「儲存路徑」" /></TextBlock>
                         </RadioButton>
                     </StackPanel>
+                    <StackPanel Margin="0,40,0,0">
+                        <Label Content="額外設定"
+                               FontSize="24" />
+                        <CheckBox x:Name="checkbox_啟動最小化"
+                                     Margin="0,10,0,0"
+                                     IsChecked="False">
+                            <TextBlock Foreground="White"
+                                       TextWrapping="Wrap"><Run Text="程式啟動時縮小至工具列" /></TextBlock>
+                        </CheckBox>
+                    </StackPanel>
                 </StackPanel>
             </ScrollViewer>
 

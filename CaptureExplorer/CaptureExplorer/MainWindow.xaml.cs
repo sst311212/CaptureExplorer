@@ -37,6 +37,7 @@ namespace CaptureExplorer {
         public String s_快速鍵_目前視窗 = "RAlt + PrtScrSysRq";//快速鍵預設值
         public bool bool_自定儲存路徑 = false;
         public bool bool_單層儲存路徑 = false;
+        public bool bool_啟動最小化 = false;
         public String s_自定儲存路徑 = "D:\\圖片";
 
 
@@ -283,6 +284,8 @@ namespace CaptureExplorer {
             d_解析度比例_x = source.CompositionTarget.TransformToDevice.M11;
             d_解析度比例_y = source.CompositionTarget.TransformToDevice.M22;
 
+            if (bool_啟動最小化)
+                func_縮小至右下角(true);
         }
 
 

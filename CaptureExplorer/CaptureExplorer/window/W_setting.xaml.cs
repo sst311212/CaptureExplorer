@@ -56,6 +56,9 @@ namespace CaptureExplorer.window {
                 radio_儲存模式_雙層.IsChecked = true;
             }
 
+            if (M.bool_啟動最小化) {
+                checkbox_啟動最小化.IsChecked = true;
+            }
 
             text_自定儲存路徑.TextChanged += (sender, e) => {
                 M.s_自定儲存路徑 = text_自定儲存路徑.Text;
@@ -77,10 +80,14 @@ namespace CaptureExplorer.window {
 
             radio_儲存模式_單層.Checked += (sender, e) => {
                 M.bool_單層儲存路徑 = true;
-                    M.func_分頁重新整理();         
+                M.func_分頁重新整理();         
             };
             radio_儲存模式_雙層.Checked += (sender, e) => {
                 M.bool_單層儲存路徑 = false;
+                M.func_分頁重新整理();
+            };
+            checkbox_啟動最小化.Checked += (sender, e) => {
+                M.bool_啟動最小化 = checkbox_啟動最小化.IsChecked.Value;
                 M.func_分頁重新整理();
             };
 
